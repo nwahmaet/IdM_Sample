@@ -5,7 +5,6 @@ Introduction
 ------------
 This repository contains sample code for a simple Security Token Service (STS) for an OpenEdge AppServer. It also contains clients that use the STS. These clients are another AppServer containing business logic, and GUI client.
 
-For the related slides, see the Identity Managament presentations at both www.pugchallenge.us and www.pugchallenge.eu
 
 Folder structure
 ------------
