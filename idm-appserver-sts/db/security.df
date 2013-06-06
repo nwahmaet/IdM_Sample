@@ -1,0 +1,112 @@
+ADD TABLE "ApplicationUser"
+  AREA "Schema Area"
+  DESCRIPTION "The application's user table. Contains login names, passwords and mappings to login domains."
+  DUMP-NAME "applicationuser"
+
+ADD FIELD "LoginName" OF "ApplicationUser" AS character 
+  DESCRIPTION "Unique login name across the entire application"
+  FORMAT "x(50)"
+  INITIAL ""
+  POSITION 8
+  MAX-WIDTH 100
+  ORDER 11
+
+ADD FIELD "Password" OF "ApplicationUser" AS character 
+  FORMAT "x(50)"
+  INITIAL ""
+  POSITION 9
+  MAX-WIDTH 100
+  ORDER 21
+
+ADD FIELD "PasswordExpiryDate" OF "ApplicationUser" AS datetime-tz 
+  FORMAT "99/99/9999 HH:MM:SS.SSS+HH:MM"
+  INITIAL ?
+  POSITION 10
+  MAX-WIDTH 12
+  ORDER 61
+
+ADD FIELD "LastLoginLocation" OF "ApplicationUser" AS character 
+  DESCRIPTION "Last login IP address or resolved host"
+  FORMAT "x(50)"
+  INITIAL ""
+  POSITION 11
+  MAX-WIDTH 100
+  ORDER 41
+
+ADD FIELD "LoginDomain" OF "ApplicationUser" AS character 
+  FORMAT "x(30)"
+  INITIAL ""
+  LABEL "Domain"
+  POSITION 12
+  MAX-WIDTH 60
+  HELP "Please enter a name."
+  ORDER 51
+
+ADD FIELD "LastLoginDate" OF "ApplicationUser" AS datetime-tz 
+  FORMAT "99/99/9999 HH:MM:SS.SSS+HH:MM"
+  INITIAL ?
+  POSITION 13
+  MAX-WIDTH 12
+  ORDER 31
+
+ADD INDEX "Login" ON "ApplicationUser" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "LoginName" ASCENDING 
+  INDEX-FIELD "LoginDomain" ASCENDING 
+
+ADD TABLE "SecurityContext"
+  AREA "Schema Area"
+  LABEL "SecurityContext"
+  DESCRIPTION "Store mapping of user login session-id to Client-Principal user credentials"
+  DUMP-NAME "credentials"
+
+ADD FIELD "SessionId" OF "SecurityContext" AS character 
+  DESCRIPTION "The user's unique user login session."
+  FORMAT "x(48)"
+  INITIAL ""
+  LABEL "session-id"
+  POSITION 2
+  MAX-WIDTH 96
+  COLUMN-LABEL "session"
+  ORDER 10
+  MANDATORY
+  CASE-SENSITIVE
+
+ADD FIELD "ClientPrincipal" OF "SecurityContext" AS raw 
+  DESCRIPTION "The value of an exported Client-Principal user credentials"
+  FORMAT "x(8)"
+  INITIAL ""
+  LABEL "principal"
+  POSITION 3
+  MAX-WIDTH 16
+  COLUMN-LABEL "principal"
+  ORDER 20
+  MANDATORY
+
+ADD FIELD "LastAccess" OF "SecurityContext" AS datetime-tz 
+  FORMAT "99/99/9999 HH:MM:SS.SSS+HH:MM"
+  INITIAL ?
+  LABEL "last access"
+  POSITION 4
+  MAX-WIDTH 12
+  COLUMN-LABEL "last access"
+  ORDER 180
+  MANDATORY
+
+ADD INDEX "SecurityContextSession" ON "SecurityContext" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "SessionId" ASCENDING 
+
+ADD INDEX "SecurityContextAccess" ON "SecurityContext" 
+  AREA "Schema Area"
+  INDEX-FIELD "LastAccess" ASCENDING 
+
+.
+PSC
+cpstream=UTF-8
+.
+0000002651

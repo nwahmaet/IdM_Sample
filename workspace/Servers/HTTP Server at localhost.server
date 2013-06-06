@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server auto-publish-setting="3" auto-publish-time="0" hostname="localhost" id="HTTP Server at localhost" isPublishing="true" name="HTTP Server at localhost" port="80" runtime-id="HTTP Server" server-type="org.eclipse.wst.server.http.server" server-type-id="org.eclipse.wst.server.http.server" start-timeout="240" stop-timeout="240" timestamp="5" urlPrefix="">
+  <list key="modules" value0="idm-ui (OpenEdge Static Web)::com.openedge.pdt.server.webspeed.staticweb.deployable.component:idm-ui::openedge.staticweb::11"/>
+</server>

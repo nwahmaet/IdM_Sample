@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Customer List</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="/IdM/css/customerlist.css" />
+<style>
+/* App custom styles */
+</style>
+</head>
+<body>
+	<div data-role="page" id="custlist" data-theme="b" data-add-back-btn="true" >
+		<div data-theme="b" data-role="header">
+         <h3>Customers</h3>
+         <a href="#options" data-rel="dialog" data-icon="gear" class="ui-btn-right" class="ui-hidden-accessible" data-iconpos="right" data-overlay-theme="b">Options</a>
+		</div>
+		<div data-role="content" id="custlist-content">
+			<ul id="custlist-listview" data-role="listview" data-divider-theme="c" data-inset="true" data-split-icon="gear" data-split-theme="d">
+			</ul>
+		</div>
+		<div data-role="footer" data-theme="b"  id="custlist-footer" data-position="fixed">
+		    <div data-role="navbar" id="custlist-navbar">
+		        <ul>
+		            <li><a href="#" id="custlist-nextpage">Next</a></li>
+		        </ul>
+		    </div><!-- /navbar -->
+		</div><!-- /footer -->
+		
+	</div>
+	<div data-role="page" id="custdetail" data-theme="b" data-add-back-btn="true" >
+		<div data-role="header" data-theme="b">
+			<h1>Customer Detail</h1>
+		</div>
+		<div data-role="content">
+			<form action="">
+				<fieldset data-role="controlgroup">
+					<div data-role="fieldcontain">
+						<label for="customerCustNum">CustNum</label> <input id="customerCustNum"
+							placeholder="" value="" type="text" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="customerName">Name</label> <input id="customerName" placeholder=""
+							value="" type="text" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="customerBalance">Balance</label> <input id="customerBalance"
+							placeholder="" value="" type="number" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="customerPhone">Phone</label> <input id="customerPhone"
+							placeholder="(999) 999-9999" value="" type="tel" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="customerAddress">Address</label> <input id="customerAddress"
+							placeholder="" value="" type="text" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="customerState">State</label> <input id="customerState" placeholder=""
+							value="" type="text" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="customerCity">City</label> <input id="customerCity" placeholder=""
+							value="" type="text" />
+					</div>
+					<div data-role="fieldcontain">
+						  <label for="customerCountry">Country</label>						  
+						  <input id="customerCountry" placeholder="" value="" type="text"/>
+						  <img id="customerCountryIcon" src="/IdM/img/flags/usa.png" alt="USA" class="ui-icon">
+					</div>
+				</fieldset>
+			</form>
+		</div>
+        <div data-role="footer" data-theme="b" data-position="fixed">
+            <div data-role="navbar" id="custlist-navbar" data-iconpos="right">
+                <ul>
+                    <li><a href="#orderdetail" id="custdetail-orders" data-icon="grid" >Orders</a></li>
+                    <li><a href="#" id="custdetail-contacts" data-icon="star">Contacts</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+	</div> <!--  page -->
+    <div data-role="page" id="orderdetail" data-theme="c" data-add-back-btn="true">
+        <div data-role="header" data-theme="b" >
+            <h1>Orders</h1>
+        </div>
+        <div data-role="content">
+        <div class="ui-grid-d" id="ordertable">
+            <div class="ui-block-a"><div class="ui-bar ui-bar-b" >Number</div></div>
+            <div class="ui-block-b"><div class="ui-bar ui-bar-b" >Order Date</div></div>
+            <div class="ui-block-c"><div class="ui-bar ui-bar-b" >Sales Rep</div></div>
+            <div class="ui-block-d"><div class="ui-bar ui-bar-b" >Status</div></div>
+            <div class="ui-block-e"><div class="ui-bar ui-bar-b" >Cust Num</div></div>
+        </div><!-- /grid-c -->
+        </div>  <!--  content -->
+    </div>
+    <div data-role="page" id="options" data-theme="c">
+        <div data-theme="b" data-role="header">
+         <h3>Options</h3>
+        </div>  <!-- header -->
+        <div data-role="content">
+            <ul id="options-listview" data-role="listview"">
+                   <li id="options-refresh">
+                       <a href="#custlist" data-transition="slide" data-icon="refresh" >Refresh
+                       <img src="/IdM/img/refresh_16x16.png" alt="Refresh" class="ui-li-icon" >
+                       </a>
+                   </li>
+                   <li id="options-login">
+                       <a href="#" data-transition="slide" >Login
+                       <img src="/IdM/img/door_in_16x16.png" alt="Login" class="ui-li-icon" >
+                       </a>
+                   </li>
+                   <li id="options-logout">
+                       <a href="#" data-transition="slide" >Logout
+                       <img src="/IdM/img/door_out_16x16.png" alt="Logout" class="ui-li-icon" >
+                       </a>
+                   </li>
+            </ul>
+        </div>  <!-- content -->
+        <div data-role="footer" class="ui-bar" data-theme="b">
+        </div> <!-- footer  -->
+    </div>   <!-- page -->  
+</body>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<script src="../log/jQuery.clientSideLogging.js"></script>
+    <script type="text/javascript">$.clientSideLogging();</script>
+<script src="/IdM/js/customerlist.js"></script>
+<script src="/IdM/js/cookies.js"></script>
+</html>

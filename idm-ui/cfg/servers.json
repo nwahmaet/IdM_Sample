@@ -1,0 +1,4 @@
+{
+  "asBusinessLogicService": {"host": "localhost", "sessionModel": "session-free", "handle": "?"},
+ "asSecurityTokenService": {"host": "localhost", "sessionModel": "session-free", "handle": "?"}
+}

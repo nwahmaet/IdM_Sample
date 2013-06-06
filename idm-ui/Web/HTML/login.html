@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+</head>
+<link rel="shortcut icon"  href="/IdM/img/fingerprint.ico" />
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+<link rel="stylesheet" href="/IdM/css/customerlist.css" />
+<body>
+	<div data-role="page" data-add-back-btn="true" id="loginPage">
+		<div data-role="header" data-theme="b">
+			<h1>Login</h1>
+		</div> 	<!-- /header -->
+		<div data-role="content" >
+				<div data-role="fieldcontain">
+					<div data-role="fieldcontain">
+						<label for="uxDomain" class="select" class="ui-hidden-accessible">User Type:</label> 
+						<select name="uxDomain" id="uxDomain" />
+						<option value="" data-placeholder="true"></option>
+						<option value="customer">Customer</option>
+						<option value="employee">Employee</option>
+						</select>
+					</div>
+					</br> <label for="uxUserName" class="ui-hidden-accessible">Name</label>
+					<input name="uxUserName" id="uxUserName" type="text"
+						placeholder="Username (try anita_andrews or david_reid)" /><br /> <label for="uxPassword"
+						class="ui-hidden-accessible">Password</label>
+					<input name="uxPassword" id="uxPassword" type="password"
+						 placeholder="Password" value="letmein" /><br />
+					</p>
+				<div data-role="controlgroup" data-type="horizontal">
+				<a id="uxCancel" href="#" data-role="button"  data-icon="back"  data-rel="back">Cancel</a>
+				<a id="uxLogin" href="#" data-role="button" data-icon="check" onclick="loginOnClick()">Login</a>
+				</div>
+			</div>   <!-- /fieldcontain -->
+		</div> 	<!-- /content -->
+		<script src="/IdM/js/login.js"></script>
+		<script src="/IdM/js/cookies.js"></script>
+	</div> <!-- /page -->
+</body>
+</html>

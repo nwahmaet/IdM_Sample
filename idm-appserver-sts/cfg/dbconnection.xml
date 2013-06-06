@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/databaseConnection.xsd">
+<databaseconnection identifier="Security">
+<name>Security</name>
+<description/>
+<physicalname>C:\devarea\conferences\13_PUG_Challenge_US\idm-appserver-sts\db\security.db</physicalname>
+<logicalname/>
+<aliases/>
+<group/>
+<host>localhost</host>
+<service/>
+<userID/>
+<password/>
+<connectionparameters/>
+<SQLIdentifier/>
+<autoStartServer>false</autoStartServer>
+<serverParameters/>
+<autoShutdownServer>false</autoShutdownServer>
+<OEVersion>11.3ALPHA</OEVersion>
+</databaseconnection>
+</root>

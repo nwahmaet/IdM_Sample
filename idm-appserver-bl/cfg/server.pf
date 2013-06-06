@@ -1,0 +1,16 @@
+# Identity Management Demo: Separate Business Database Connection 
+# ===========================================================================
+
+-db ./db/sports2000.db
+-T  ./temp
+# Default settings
+ -s 200 
+ -mmax 65534 
+ -debugalert 
+ -rereadnolock 
+ -inp 16000 
+ -tok 4000 
+ -noincrwarn
+ -errorstack
+ -D 256
+# eof

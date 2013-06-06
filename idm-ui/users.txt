@@ -1,0 +1,30 @@
+Domain: customer
+	herman's_world-sporting_goods
+	abc_sports
+	academy_sports_&_outdoors
+	hibbett_sports
+	action_sports
+	action_sports_ctr
+	high_country_sports
+	active_athlete_inc
+	high_five_sports_inc
+	g_&_k_sports
+
+
+Domain: employee
+	dawn_weston
+	steven_blair
+	brittney_burton
+	stacey_smith
+	dan_flanagan
+	david_reid
+	dave_kelley
+	alexander_anderson
+	brad_young
+	anita_andrews
+
+
+Domain: system
+	administrator
+	agent
+	batch
