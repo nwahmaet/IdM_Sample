@@ -5,11 +5,14 @@
 
 # R-code
 *.r
+
+# Ignore the db-related stuff, like data and bi extents, logs etc.
 */db/*.db
 */db/*.d*
 !*.df
 */db/*.lic
 */db/*.b*
+*/db/*.lg
 
 #################
 ## Eclipse
