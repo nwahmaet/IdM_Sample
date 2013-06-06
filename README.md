@@ -31,13 +31,12 @@ Installation & Setup:
    new workspace or reuse an existing one.
    
 1) Import the projects used. Select File > Import > Existing Projects into Workspace,
-   and select the 'Select archive file' option. Select the PUG_US_13-IdM.zip 
-   file and select all of the available projects, including the 'Servers' project.
+   and select the 'Select archive file' option. Select the root folder into which this repository has been cloned and select all of the available projects, including the 'Servers' project.
    
 2) Each of the projects has a readme.txt in it that describes how to set that 
-   project up. The idm-separate-bl, idm-separate-sts and idm-single projects 
+   project up. The idm-appserver-bl and idm-appserver-sts projects 
    have associated databases. Once these are set up, they should be added to 
-   their repsective projects via the Project > Properties > Progress OpenEdge >
+   their respective projects via the Project > Properties > Progress OpenEdge >
    Database Connections dialog and the 'Configure database connections' link.
 
 3) Set up the runtime environment for the HTTP server. Open the Window > 
