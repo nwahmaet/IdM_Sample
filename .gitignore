@@ -1,3 +1,16 @@
+
+##################
+## OpenEdge ABL
+##################
+
+# R-code
+*.r
+*/db/*.db
+*/db/*.d*
+!*.df
+*/db/*.lic
+*/db/*.b*
+
 #################
 ## Eclipse
 #################
@@ -213,3 +226,4 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
